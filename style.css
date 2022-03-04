@@ -1,3 +1,7 @@
 .product {
-  /* display: none; */
+  display: none;
+}
+
+.visible {
+  display: block !important;
 }
