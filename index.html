@@ -1,13 +1,1991 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1 class="product">YO!!</h1>
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://jasenmichael.github.io/shopify-checkout-css-js/style.css"> -->
+    <script src="main.js"></script>
+    <!-- <script src="https://jasenmichael.github.io/shopify-checkout-css-js/main.js"></script> -->
+  </head>
+  <body>
+    <aside class="sidebar" role="complementary">
+
+      <div class="sidebar__content">
+        <div
+          id="order-summary"
+          class="order-summary order-summary--is-collapsed"
+          data-order-summary=""
+        >
+          <h2 class="visually-hidden-if-js">Order summary</h2>
+
+          <div class="order-summary__sections">
+            <div
+              class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable"
+            >
+              <div
+                class="order-summary__section__content"
+                tabindex="0"
+                aria-labelledby="order-summary__scroll-indicator"
+              >
+                <table class="product-table">
+                  <caption class="visually-hidden">
+                    Shopping cart
+                  </caption>
+                  <thead class="product-table__header">
+                    <tr>
+                      <th scope="col">
+                        <span class="visually-hidden">Product image</span>
+                      </th>
+                      <th scope="col">
+                        <span class="visually-hidden">Description</span>
+                      </th>
+                      <th scope="col">
+                        <span class="visually-hidden">Quantity</span>
+                      </th>
+                      <th scope="col">
+                        <span class="visually-hidden">Price</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody data-order-summary-section="line-items">
+                    <tr
+                      class="product"
+                      data-product-id="6922241179857"
+                      data-variant-id="40711687995601"
+                      data-product-type="desktop"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Thelio"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Thelio</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >$1,349.00</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922233250001"
+                      data-variant-id="40711669711057"
+                      data-product-type="Warranty"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Limited Parts and Labor Warranty"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Limited Parts and Labor Warranty</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231480529"
+                      data-variant-id="40711667908817"
+                      data-product-type="Graphics"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Integrated Graphics"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Integrated Graphics</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231414993"
+                      data-variant-id="40711667843281"
+                      data-product-type="Processor"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12 Threads)"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12
+                          Threads)</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231054545"
+                      data-variant-id="40711667482833"
+                      data-product-type="Assembly Service"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Normal Assembly - Ships within 10 business days from assembly"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Normal Assembly - Ships within 10 business days from
+                          assembly</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922230825169"
+                      data-variant-id="40711666958545"
+                      data-product-type="OS Drive"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922227056849"
+                      data-variant-id="40711659389137"
+                      data-product-type="Operating System"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Pop!_OS 21.10 (64-bit) with full disk-encryption"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Pop!_OS 21.10 (64-bit) with full
+                          disk-encryption</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220896465"
+                      data-variant-id="40711647232209"
+                      data-product-type="System76 Thelio I/O boards"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="System76 Thelio I/O board"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >System76 Thelio I/O board</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220863697"
+                      data-variant-id="40711647199441"
+                      data-product-type="Additional Fans"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="140mm High RPM PWM fan"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >140mm High RPM PWM fan</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922210934993"
+                      data-variant-id="40711619150033"
+                      data-product-type="Define your style"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Walnut - _Classical style in a rich brown finish_"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Walnut - _Classical style in a rich brown
+                          finish_</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922200219857"
+                      data-variant-id="40711596474577"
+                      data-product-type="Additional M.2 NVMe Storage"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="No Additional M.2 PCIe Storage"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >No Additional M.2 PCIe Storage</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199924945"
+                      data-variant-id="40711595917521"
+                      data-product-type="Networking"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Built-in WiFi up to 1.73 Gbps + Bluetooth"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Built-in WiFi up to 1.73 Gbps + Bluetooth</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199859409"
+                      data-variant-id="40711595851985"
+                      data-product-type="Power Supply"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Power Supply"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Power Supply</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922204250321"
+                      data-variant-id="40711606468817"
+                      data-product-type="Memory"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Dual Channel DDR4 @ 3200 MHz (2x 32GB)"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Dual Channel DDR4 @ 3200 MHz (2x 32GB)</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >$379.00</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922241179857"
+                      data-variant-id="40711687995601"
+                      data-product-type="desktop"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Thelio"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Thelio</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >$1,349.00</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922233250001"
+                      data-variant-id="40711669711057"
+                      data-product-type="Warranty"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Limited Parts and Labor Warranty"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Limited Parts and Labor Warranty</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231480529"
+                      data-variant-id="40711667908817"
+                      data-product-type="Graphics"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Integrated Graphics"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Integrated Graphics</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231414993"
+                      data-variant-id="40711667843281"
+                      data-product-type="Processor"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12 Threads)"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12
+                          Threads)</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231054545"
+                      data-variant-id="40711667482833"
+                      data-product-type="Assembly Service"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Normal Assembly - Ships within 10 business days from assembly"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Normal Assembly - Ships within 10 business days from
+                          assembly</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922230825169"
+                      data-variant-id="40711666958545"
+                      data-product-type="OS Drive"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922227056849"
+                      data-variant-id="40711659389137"
+                      data-product-type="Operating System"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Pop!_OS 21.10 (64-bit) with full disk-encryption"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Pop!_OS 21.10 (64-bit) with full
+                          disk-encryption</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220896465"
+                      data-variant-id="40711647232209"
+                      data-product-type="System76 Thelio I/O boards"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="System76 Thelio I/O board"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >System76 Thelio I/O board</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220863697"
+                      data-variant-id="40711647199441"
+                      data-product-type="Additional Fans"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="140mm High RPM PWM fan"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >140mm High RPM PWM fan</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922210934993"
+                      data-variant-id="40711619150033"
+                      data-product-type="Define your style"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Walnut - _Classical style in a rich brown finish_"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Walnut - _Classical style in a rich brown
+                          finish_</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922200219857"
+                      data-variant-id="40711596474577"
+                      data-product-type="Additional M.2 NVMe Storage"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="No Additional M.2 PCIe Storage"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >No Additional M.2 PCIe Storage</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199924945"
+                      data-variant-id="40711595917521"
+                      data-product-type="Networking"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Built-in WiFi up to 1.73 Gbps + Bluetooth"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Built-in WiFi up to 1.73 Gbps + Bluetooth</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199859409"
+                      data-variant-id="40711595851985"
+                      data-product-type="Power Supply"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Power Supply"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Power Supply</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199236817"
+                      data-variant-id="40711594148049"
+                      data-product-type="Memory"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Single Channel DDR4 @ 3200 MHz"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Single Channel DDR4 @ 3200 MHz</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922241179857"
+                      data-variant-id="40711687995601"
+                      data-product-type="desktop"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Thelio"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Thelio</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >$1,349.00</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922233250001"
+                      data-variant-id="40711669711057"
+                      data-product-type="Warranty"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Limited Parts and Labor Warranty"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Limited Parts and Labor Warranty</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231480529"
+                      data-variant-id="40711667908817"
+                      data-product-type="Graphics"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Integrated Graphics"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Integrated Graphics</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231414993"
+                      data-variant-id="40711667843281"
+                      data-product-type="Processor"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12 Threads)"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >AMD Ryzen 5 5600G (3.9 up to 4.4GHz - 6 Cores - 12
+                          Threads)</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922231054545"
+                      data-variant-id="40711667482833"
+                      data-product-type="Assembly Service"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Normal Assembly - Ships within 10 business days from assembly"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Normal Assembly - Ships within 10 business days from
+                          assembly</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922230825169"
+                      data-variant-id="40711666958545"
+                      data-product-type="OS Drive"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Up to Seq Read: 1500 MB/s, Seq Write: 550 MB/s</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922227056849"
+                      data-variant-id="40711659389137"
+                      data-product-type="Operating System"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Pop!_OS 21.10 (64-bit) with full disk-encryption"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Pop!_OS 21.10 (64-bit) with full
+                          disk-encryption</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220896465"
+                      data-variant-id="40711647232209"
+                      data-product-type="System76 Thelio I/O boards"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="System76 Thelio I/O board"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >System76 Thelio I/O board</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922220863697"
+                      data-variant-id="40711647199441"
+                      data-product-type="Additional Fans"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="140mm High RPM PWM fan"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >140mm High RPM PWM fan</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922210934993"
+                      data-variant-id="40711619150033"
+                      data-product-type="Define your style"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Walnut - _Classical style in a rich brown finish_"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Walnut - _Classical style in a rich brown
+                          finish_</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922200219857"
+                      data-variant-id="40711596474577"
+                      data-product-type="Additional M.2 NVMe Storage"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="No Additional M.2 PCIe Storage"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >No Additional M.2 PCIe Storage</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199924945"
+                      data-variant-id="40711595917521"
+                      data-product-type="Networking"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Built-in WiFi up to 1.73 Gbps + Bluetooth"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Built-in WiFi up to 1.73 Gbps + Bluetooth</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199859409"
+                      data-variant-id="40711595851985"
+                      data-product-type="Power Supply"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Power Supply"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Power Supply</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                    <tr
+                      class="product"
+                      data-product-id="6922199236817"
+                      data-variant-id="40711594148049"
+                      data-product-type="Memory"
+                      data-customer-ready-visible=""
+                    >
+                      <td class="product__image">
+                        <div class="product-thumbnail">
+                          <div class="product-thumbnail__wrapper">
+                            <img
+                              alt="Single Channel DDR4 @ 3200 MHz"
+                              class="product-thumbnail__image"
+                              src="//cdn.shopify.com/shopifycloud/shopify/assets/checkout/product-blank-98d4187c2152136e9fb0587a99dfcce6f6873f3a9f21ea9135ed7f495296090f.png"
+                            />
+                          </div>
+                          <span
+                            class="product-thumbnail__quantity"
+                            aria-hidden="true"
+                            >1</span
+                          >
+                        </div>
+                      </td>
+                      <th class="product__description" scope="row">
+                        <span
+                          class="product__description__name order-summary__emphasis"
+                          >Single Channel DDR4 @ 3200 MHz</span
+                        >
+                        <span
+                          class="product__description__variant order-summary__small-text"
+                        ></span>
+                      </th>
+                      <td class="product__quantity">
+                        <span class="visually-hidden"> 1 </span>
+                      </td>
+                      <td class="product__price">
+                        <span
+                          class="order-summary__emphasis skeleton-while-loading"
+                          >Free</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div
+                  class="order-summary__scroll-indicator"
+                  aria-hidden="true"
+                  tabindex="-1"
+                  id="order-summary__scroll-indicator"
+                >
+                  Scroll for more items
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    class="icon-svg icon-svg--size-12"
+                  >
+                    <use xlink:href="#down-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="order-summary__section order-summary__section--total-lines"
+              data-order-summary-section="payment-lines"
+            >
+              <table class="total-line-table">
+                <caption class="visually-hidden">
+                  Cost summary
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">
+                      <span class="visually-hidden">Description</span>
+                    </th>
+                    <th scope="col">
+                      <span class="visually-hidden">Price</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="total-line-table__tbody">
+                  <tr class="total-line total-line--subtotal">
+                    <th class="total-line__name" scope="row">Subtotal</th>
+                    <td class="total-line__price">
+                      <span
+                        class="order-summary__emphasis skeleton-while-loading"
+                        data-checkout-subtotal-price-target="442600"
+                      >
+                        $4,426.00
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr class="total-line total-line--shipping">
+                    <th class="total-line__name" scope="row">
+                      <span> Shipping </span>
+                    </th>
+                    <td class="total-line__price">
+                      <span
+                        class="skeleton-while-loading order-summary__small-text"
+                        data-checkout-total-shipping-target="0"
+                      >
+                        Calculated at next step
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr
+                    class="total-line total-line--taxes hidden"
+                    data-checkout-taxes=""
+                  >
+                    <th class="total-line__name" scope="row">Taxes</th>
+                    <td class="total-line__price">
+                      <span
+                        class="order-summary__emphasis skeleton-while-loading"
+                        data-checkout-total-taxes-target="0"
+                        >—</span
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot class="total-line-table__footer">
+                  <tr class="total-line">
+                    <th class="total-line__name payment-due-label" scope="row">
+                      <span class="payment-due-label__total">Total</span>
+                    </th>
+                    <td
+                      class="total-line__price payment-due"
+                      data-presentment-currency="USD"
+                    >
+                      <span class="payment-due__currency remove-while-loading"
+                        >USD</span
+                      >
+                      <span
+                        class="payment-due__price skeleton-while-loading--lg"
+                        data-checkout-payment-due-target="442600"
+                      >
+                        $4,426.00
+                      </span>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="visually-hidden"
+          data-order-summary-section="accessibility-live-region"
+        >
+          <div aria-live="polite" aria-atomic="true" role="status">
+            Updated total price:
+            <span data-checkout-payment-due-target="442600"> $4,426.00 </span>
+          </div>
+        </div>
+
+        <div
+          id="partial-icon-symbols"
+          class="icon-symbols"
+          data-tg-refresh="partial-icon-symbols"
+          data-tg-refresh-always="true"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <symbol id="status-sold-out">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                <g
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                  fill="none"
+                >
+                  <circle cx="7" cy="7" r="6"></circle>
+                  <path d="M11.066 2.934l-7.628 7.628"></path>
+                </g>
+              </svg>
+            </symbol>
+            <symbol id="spinner-button">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path
+                  d="M20 10c0 5.523-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0v2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8h2z"
+                ></path>
+              </svg>
+            </symbol>
+            <symbol id="chevron-right">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10">
+                <path d="M2 1l1-1 4 4 1 1-1 1-4 4-1-1 4-4"></path>
+              </svg>
+            </symbol>
+            <symbol id="down-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12">
+                <path
+                  d="M10.817 7.624l-4.375 4.2c-.245.235-.64.235-.884 0l-4.375-4.2c-.244-.234-.244-.614 0-.848.245-.235.64-.235.884 0L5.375 9.95V.6c0-.332.28-.6.625-.6s.625.268.625.6v9.35l3.308-3.174c.122-.117.282-.176.442-.176.16 0 .32.06.442.176.244.234.244.614 0 .848"
+                ></path>
+              </svg>
+            </symbol>
+          </svg>
+        </div>
+      </div>
+    </aside>
+  </body>
 </html>
