@@ -1,6 +1,5 @@
 const orderSummary = document.getElementById("order-summary");
 if (orderSummary) {
-    // <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
   const spinnerTemplate = `
     <div id="spinner">
       <div class="css-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
@@ -19,7 +18,14 @@ window.addEventListener("load", () => {
     const isFree =
       product.getElementsByClassName("product__price")[0].innerText.trim() ===
       "Free";
-    const titleWhitelist = ["Pop!_OS", "Ubuntu"];
+    const titleWhitelist = [
+        "Pop!_OS", 
+        "Ubuntu", 
+        "Parts and Labor Warranty",
+        "Integrated Graphics",
+        "AMD ",
+        "Intel ",
+    ];
     const title = product
       .getElementsByClassName("product__description__name")[0]
       .innerText.trim()
@@ -27,6 +33,12 @@ window.addEventListener("load", () => {
     const isWhitelist = titleWhitelist.some((t) => title.includes(t));
 
     if (!isFree || isWhitelist) {
+      {
+        isFree
+          ? (product.getElementsByClassName("product__price")[0].innerText =
+              "Included")
+          : null;
+      }
       product.classList.add("visible");
     }
   });
