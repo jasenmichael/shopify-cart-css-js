@@ -10,10 +10,10 @@ if (orderSummary) {
 
 window.addEventListener("load", () => {
   const products = [...document.getElementsByClassName("product")];
-//   const spinner = document.querySelector("#spinner");
-//   if (spinner) {
-//     spinner.parentNode.removeChild(spinner);
-//   }
+  const spinner = document.querySelector("#spinner");
+  if (spinner) {
+    spinner.parentNode.removeChild(spinner);
+  }
 
   products.forEach((product, i) => {
     const isFree =
