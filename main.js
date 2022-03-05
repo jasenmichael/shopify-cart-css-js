@@ -1,14 +1,13 @@
-window.addEventListener("load", () => {
-  //   const list = document.querySelector(
-  //     '[data-order-summary-section="line-items"]'
-  //   );
-  const orderSummary = document.getElementById("order-summary");
-  const spinnerTemplate = `
-  <div id="spinner">
-      <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
-  </div>`;
-  orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
+const orderSummary = document.getElementById("order-summary");
+if (orderSummary) {
+    const spinnerTemplate = `
+    <div id="spinner">
+    <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
+    </div>`;
+    orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
+}
 
+window.addEventListener("load", () => {
   const products = [...document.getElementsByClassName("product")];
   setTimeout(() => {
       const spinner = document.querySelector("#spinner");
