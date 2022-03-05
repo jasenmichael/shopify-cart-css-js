@@ -9,7 +9,9 @@ window.addEventListener("load", () => {
         const title = product.getElementsByClassName("product__description__name")[0].innerText.trim().split("\n")[0];
         const isWhitelist = titleWhitelist.some(t => title.includes(t));
         const spinner = document.querySelector('#spinner')
-        spinner.parentNode.removeChild(spinner);
+        if (spinner) {
+            spinner.parentNode.removeChild(spinner);
+        }
         if (!isFree || isWhitelist) {
             product.classList.add("visible");
         }
