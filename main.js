@@ -1,14 +1,13 @@
 window.addEventListener("load", () => {
-  const list = document.querySelector(
-    '[data-order-summary-section="line-items"]'
-  );
+  //   const list = document.querySelector(
+  //     '[data-order-summary-section="line-items"]'
+  //   );
+  const orderSummary = document.getElementById("order-summary");
   const spinnerTemplate = `
-  <tr id="spinner">
-    <td>
+  <div id="spinner">
       <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
-    </td>
-  </tr>`;
-  list.innerHTML = spinnerTemplate + list.innerHTML;
+  </div>`;
+  orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
 
   const products = [...document.getElementsByClassName("product")];
   products.forEach((product, i) => {
@@ -21,9 +20,9 @@ window.addEventListener("load", () => {
       .innerText.trim()
       .split("\n")[0];
     const isWhitelist = titleWhitelist.some((t) => title.includes(t));
-    const spinner = document.querySelector('#spinner')
+    const spinner = document.querySelector("#spinner");
     if (spinner) {
-        spinner.parentNode.removeChild(spinner);
+      spinner.parentNode.removeChild(spinner);
     }
     if (!isFree || isWhitelist) {
       product.classList.add("visible");
