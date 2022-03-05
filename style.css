@@ -10,11 +10,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
 }
 
 .lds-spinner {
-  color: red;
+  color: #3B3633;
   display: inline-block;
   position: relative;
   width: 80px;
@@ -33,7 +33,7 @@
   width: 6px;
   height: 18px;
   border-radius: 20%;
-  background: black;
+  background: #3B3633;
 }
 .lds-spinner div:nth-child(1) {
   transform: rotate(0deg);
