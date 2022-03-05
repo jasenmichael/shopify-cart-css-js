@@ -1,22 +1,19 @@
 const orderSummary = document.getElementById("order-summary");
 if (orderSummary) {
-    const spinnerTemplate = `
+    // <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
+  const spinnerTemplate = `
     <div id="spinner">
-    <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
+      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>`;
-    orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
+  orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
 }
 
 window.addEventListener("load", () => {
   const products = [...document.getElementsByClassName("product")];
-  setTimeout(() => {
-      const spinner = document.querySelector("#spinner");
-      if (spinner) {
-        spinner.parentNode.removeChild(spinner);
-      }
-  }, 2000);
-
-
+//   const spinner = document.querySelector("#spinner");
+//   if (spinner) {
+//     spinner.parentNode.removeChild(spinner);
+//   }
 
   products.forEach((product, i) => {
     const isFree =
