@@ -3,7 +3,7 @@ if (orderSummary) {
     // <img src="https://jasenmichael.github.io/shopify-checkout-css-js/spinning-loading.gif" />
   const spinnerTemplate = `
     <div id="spinner">
-      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      <div class="css-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>`;
   orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
 }
