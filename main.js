@@ -1,7 +1,6 @@
-window.addEventListener("load", function() {
+window.addEventListener("load", () => {
     const products = [...document.getElementsByClassName("product")]
     products.forEach((product, i) => {
-        console.log(product.getElementsByClassName("product__price")[0].innerText.trim());
         const isFree = product.getElementsByClassName("product__price")[0].innerText.trim() === "Free";
         const titleWhitelist = [
             "Pop!_OS",
