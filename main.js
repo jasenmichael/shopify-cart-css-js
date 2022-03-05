@@ -10,6 +10,15 @@ window.addEventListener("load", () => {
   orderSummary.innerHTML = spinnerTemplate + orderSummary.innerHTML;
 
   const products = [...document.getElementsByClassName("product")];
+  setTimeout(() => {
+      const spinner = document.querySelector("#spinner");
+      if (spinner) {
+        spinner.parentNode.removeChild(spinner);
+      }
+  }, 2000);
+
+
+
   products.forEach((product, i) => {
     const isFree =
       product.getElementsByClassName("product__price")[0].innerText.trim() ===
@@ -20,10 +29,7 @@ window.addEventListener("load", () => {
       .innerText.trim()
       .split("\n")[0];
     const isWhitelist = titleWhitelist.some((t) => title.includes(t));
-    const spinner = document.querySelector("#spinner");
-    if (spinner) {
-      spinner.parentNode.removeChild(spinner);
-    }
+
     if (!isFree || isWhitelist) {
       product.classList.add("visible");
     }
