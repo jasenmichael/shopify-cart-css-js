@@ -8,10 +8,10 @@
 
 .no-thumbnail {
   height: 1px !important;
-  background-color: transparent !important;
+  background-color: #fafafa !important;
 }
 .no-thumbnail::after {
-  border: 0 #fafafa00 solid !important;
+  border: 0 #fafafa solid !important;
 }
 
 .no-thumbnail > .product-thumbnail__quantity {
