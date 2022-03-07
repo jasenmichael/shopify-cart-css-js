@@ -8,6 +8,7 @@
 
 .no-thumbnail {
   height: 1px !important;
+  background-color: transparent !important;
 }
 .no-thumbnail::after {
   border: 0 #fafafa00 solid !important;
