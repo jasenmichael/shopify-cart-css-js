@@ -9,6 +9,8 @@
 
 .no-thumbnail {
   height: 1px !important;
+}
+.no-thumbnail::after {
   border: 0 #fafafa00 solid !important;
 }
 
