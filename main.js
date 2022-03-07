@@ -20,30 +20,51 @@ if (orderSummary) {
 
 // add items to cart after page load
 window.addEventListener("load", () => {
-  const products = [...document.getElementsByClassName("product")].filter((div) => div.nodeType == 1)
+  const products = [...document.getElementsByClassName("product")].filter(
+    (div) => div.nodeType == 1
+  );
   const spinner = document.querySelector("#spinner");
   if (spinner) {
     spinner.parentNode.removeChild(spinner);
   }
 
+  // sort products by price
   let sortedProducts = products.sort((a, b) => {
-    const aInnerText = a
-      .getElementsByClassName("product__price")[0]
-      .innerText.trim();
-    const bInnerText = b
-      .getElementsByClassName("product__price")[0]
-      .innerText.trim();
-    return aInnerText === bInnerText ? -1 : aInnerText < bInnerText ? 0 : 1;
-  });  // data-order-summary-section="line-items"
+    const aInnerText = Number(
+      a
+        .getElementsByClassName("product__price")[0]
+        .innerText.trim()
+        .replace(/(^\$|,)/g, "")
+    );
+    const bInnerText = Number(
+      b
+        .getElementsByClassName("product__price")[0]
+        .innerText.trim()
+        .replace(/(^\$|,)/g, "")
+    );
+    console.log(aInnerText, bInnerText);
+    return aInnerText === "Free" ||
+      bInnerText === "Free" ||
+      aInnerText === "Included" ||
+      bInnerText === "Included"
+      ? -1
+      : aInnerText < bInnerText
+      ? 1
+      : 0;
+  });
 
-  const productsTable = document.querySelector('[data-order-summary-section="line-items"]');
+  // clear all unsorted products
+  const productsTable = document.querySelector(
+    '[data-order-summary-section="line-items"]'
+  );
   productsTable.innerHTML = "";
 
+  // add sorted prodicts to the dom
   for (i = 0; i < sortedProducts.length; ++i) {
     productsTable.appendChild(sortedProducts[i]);
   }
 
-  // loop product elements
+  // loop product elements, make visible only non-free, and whitelisted free products
   products.forEach((product, i) => {
     // check if product is free
     const isFree =
@@ -56,7 +77,6 @@ window.addEventListener("load", () => {
       .innerText.trim()
       .split("\n")[0];
     const isWhitelist = titleWhitelist.some((t) => title.includes(t));
-    // || anotherWhitelist.some((a) => another.includes(a));
 
     // make all non-free and white listed free items visible
     if (!isFree || isWhitelist) {
