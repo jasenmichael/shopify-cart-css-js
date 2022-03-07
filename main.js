@@ -34,17 +34,10 @@ window.addEventListener("load", () => {
 
     if (!isFree || isWhitelist) {
       if (isFree) {
-        // product.getElementsByClassName("product-thumbnail")[0].innerHTML = ""
         product.getElementsByClassName("product-thumbnail")[0].classList.add("no-thumbnail")
-        // product.getElementsByClassName("product-thumbnail__image")[0].src = "https://jasenmichael.github.io/shopify-checkout-css-js/blank.png"
+        product.getElementsByClassName("product-thumbnail__quantity")[0]= ""
         product.getElementsByClassName("product__price")[0].innerText = "Included" 
       }
-      // {
-      //   isFree
-      //     ? (product.getElementsByClassName("product__price")[0].innerText =
-      //         "Included")
-      //     : null;
-      // }
       product.classList.add("visible");
     }
   });
