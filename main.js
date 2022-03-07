@@ -33,7 +33,7 @@ window.addEventListener("load", () => {
     const bInnerText = b
       .getElementsByClassName("product__price")[0]
       .innerText.trim();
-    return aInnerText === bInnerText ? 0 : aInnerText > bInnerText ? 1 : -1;
+    return aInnerText === bInnerText ? 0 : aInnerText < bInnerText ? 1 : -1;
   });  // data-order-summary-section="line-items"
 
   const productsTable = document.querySelector('[data-order-summary-section="line-items"]');
