@@ -6,7 +6,6 @@
   display: block !important;
 }
 
-
 .no-thumbnail {
   height: 1px !important;
 }
@@ -14,16 +13,19 @@
   border: 0 #fafafa00 solid !important;
 }
 
+.no-thumbnail > .product-thumbnail__quantity {
+  display: none;
+}
+
 /* spinner */
 #spinner {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .css-spinner {
-  color: #3B3633;
+  color: #3b3633;
   display: inline-block;
   position: relative;
   width: 80px;
@@ -42,7 +44,7 @@
   width: 6px;
   height: 18px;
   border-radius: 20%;
-  background: #3B3633;
+  background: #3b3633;
 }
 .css-spinner div:nth-child(1) {
   transform: rotate(0deg);
