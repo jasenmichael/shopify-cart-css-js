@@ -6,6 +6,12 @@
   display: block !important;
 }
 
+
+.no-thumbnail {
+  height: 1px !important;
+}
+
+/* spinner */
 #spinner {
   display: flex;
   justify-content: center;

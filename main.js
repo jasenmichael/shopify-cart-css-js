@@ -34,8 +34,10 @@ window.addEventListener("load", () => {
 
     if (!isFree || isWhitelist) {
       if (isFree) {
-        product.getElementsByClassName("product-thumbnail__image")[0].src = "https://jasenmichael.github.io/shopify-checkout-css-js/blank.png"
-        product.getElementsByClassName("product__price")[0].innerText = "Included"
+        // product.getElementsByClassName("product-thumbnail")[0].innerHTML = ""
+        product.getElementsByClassName("product-thumbnail")[0].classList.add("no-thumbnail")
+        // product.getElementsByClassName("product-thumbnail__image")[0].src = "https://jasenmichael.github.io/shopify-checkout-css-js/blank.png"
+        product.getElementsByClassName("product__price")[0].innerText = "Included" 
       }
       // {
       //   isFree
