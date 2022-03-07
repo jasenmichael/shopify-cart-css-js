@@ -9,6 +9,7 @@
 
 .no-thumbnail {
   height: 1px !important;
+  border: 0 #fafafa00 solid !important;
 }
 
 /* spinner */
