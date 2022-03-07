@@ -33,12 +33,16 @@ window.addEventListener("load", () => {
     const isWhitelist = titleWhitelist.some((t) => title.includes(t));
 
     if (!isFree || isWhitelist) {
-      {
-        isFree
-          ? (product.getElementsByClassName("product__price")[0].innerText =
-              "Included")
-          : null;
+      if (isFree) {
+        product.getElementsByClassName("product-thumbnail__image")[0].src = "https://jasenmichael.github.io/shopify-checkout-css-js/blank.png"
+        product.getElementsByClassName("product__price")[0].innerText = "Included"
       }
+      // {
+      //   isFree
+      //     ? (product.getElementsByClassName("product__price")[0].innerText =
+      //         "Included")
+      //     : null;
+      // }
       product.classList.add("visible");
     }
   });
