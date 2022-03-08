@@ -47,7 +47,7 @@ window.addEventListener("load", () => {
       bInnerText === "Free" ||
       aInnerText === "Included" ||
       bInnerText === "Included"
-      ? -1
+      ? -2
       : aInnerText < bInnerText
       ? 1
       : 0;
