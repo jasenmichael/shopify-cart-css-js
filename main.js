@@ -56,10 +56,10 @@ window.addEventListener("load", () => {
   });
 
   // // clear all unsorted products
-  // const productsTable = document.querySelector(
-  //   '[data-order-summary-section="line-items"]'
-  // );
-  // productsTable.innerHTML = "";
+  const productsTable = document.querySelector(
+    '[data-order-summary-section="line-items"]'
+  );
+  productsTable.innerHTML = "";
 
   // add sorted products to the dom
   sortedProducts.forEach((product) => {
