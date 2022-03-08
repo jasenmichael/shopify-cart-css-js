@@ -42,11 +42,13 @@ window.addEventListener("load", () => {
         .innerText.trim()
         .replace(/(^\$|,)/g, "")
     );
-    console.log(aInnerText, bInnerText);
+    // console.log(aInnerText, bInnerText);
     return aInnerText === "Free" ||
       bInnerText === "Free" ||
       aInnerText === "Included" ||
-      bInnerText === "Included"
+      bInnerText === "Included" ||
+      aInnerText === NaN ||
+      bInnerText === NaN
       ? -2
       : aInnerText < bInnerText
       ? 1
