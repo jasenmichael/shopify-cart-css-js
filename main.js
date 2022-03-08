@@ -42,17 +42,9 @@ window.addEventListener("load", () => {
         .innerText.trim()
         .replace(/(^\$|,)/g, "")
     );
-    // console.log(aInnerText, bInnerText);
-    return aInnerText === "Free" ||
-      bInnerText === "Free" ||
-      aInnerText === "Included" ||
-      bInnerText === "Included" ||
-      aInnerText === NaN ||
-      bInnerText === NaN
-      ? -2
-      : aInnerText < bInnerText
-      ? 1
-      : 0;
+    console.log(aInnerText, bInnerText);
+    return bInnerText - aInnerText;
+    // return aInnerText === bInnerText ? -2 : aInnerText < bInnerText ? 1 : 0;
   });
 
   // // clear all unsorted products
@@ -64,7 +56,7 @@ window.addEventListener("load", () => {
   // add sorted products to the dom
   sortedProducts.forEach((product) => {
     productsTable.appendChild(product);
-  })
+  });
 
   // loop product elements, make visible only non-free, and whitelisted free products
   products.forEach((product, i) => {
