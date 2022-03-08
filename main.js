@@ -53,16 +53,16 @@ window.addEventListener("load", () => {
       : 0;
   });
 
-  // clear all unsorted products
-  const productsTable = document.querySelector(
-    '[data-order-summary-section="line-items"]'
-  );
-  productsTable.innerHTML = "";
+  // // clear all unsorted products
+  // const productsTable = document.querySelector(
+  //   '[data-order-summary-section="line-items"]'
+  // );
+  // productsTable.innerHTML = "";
 
-  // add sorted prodicts to the dom
-  for (i = 0; i < sortedProducts.length; ++i) {
-    productsTable.appendChild(sortedProducts[i]);
-  }
+  // add sorted products to the dom
+  sortedProducts.forEach((product) => {
+    productsTable.appendChild(product);
+  })
 
   // loop product elements, make visible only non-free, and whitelisted free products
   products.forEach((product, i) => {
